@@ -29,9 +29,6 @@ ja:
         current_sign_in_ip: current_sign_in_ip  #g
         email: email  #g
         encrypted_password: encrypted_password  #g
-        google_auth_token: google_auth_token  #g
-        google_refresh_token: google_refresh_token  #g
-        google_token_expires_at: google_token_expires_at  #g
         image_url: image_url  #g
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g

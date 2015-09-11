@@ -35,9 +35,6 @@ class PostsController < ApplicationController
   def mail
     @post = set_post
 
-    # refresh google oauth token if expired
-    # current_user.google_oauth_token_refresh! if current_user.google_oauth_token_expired?
-
     compose_mail(@post, user: current_user, to: mail_params[:to]).deliver
     gflash success: 'Mail has been sent!'
     redirect_to root_path(id: @post.id)

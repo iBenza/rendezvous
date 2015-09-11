@@ -6,11 +6,6 @@ defaults: &defaults
 
   permited_login_domain: <%= ENV['RV_PERMITTED_LOGIN_DOMAIN'] %>
 
-  # For login
-  google_api:
-    client_id: <%= ENV['RV_GOOGLE_API_CLIENT_ID'] %>
-    secret: <%= ENV['RV_GOOGLE_API_SECRET'] %>
-
   # For file upload
   s3:
     access_key_id: <%= ENV['RV_S3_ASSESS_KEY_ID'] %>

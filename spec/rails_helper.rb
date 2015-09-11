@@ -97,13 +97,4 @@ RSpec.configure do |config|
 
   # Capybara.app_host = "http://127.0.0.1/"
   register_poltergeist(config)
-
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.add_mock(:google_oauth2,
-                           'uid' => '12345',
-                           'provider' => 'google_oauth2',
-                           'info' => { 'name' => 'Taro Yamada', 'email' => 'taro@example.com' },
-                           'credentials' => { 'token' => 'aaaaa', 'refresh_token' => 'bbbbb', 'expires_at' => 9_999_999_999 }
-  )
-
 end
