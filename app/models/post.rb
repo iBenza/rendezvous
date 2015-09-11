@@ -1,18 +1,3 @@
-# == Schema Information
-#
-# Table name: posts
-#
-#  id             :integer          not null, primary key
-#  title          :string(255)
-#  body           :text
-#  author_id      :integer
-#  created_at     :datetime
-#  updated_at     :datetime
-#  is_draft       :boolean          default(FALSE)
-#  specified_date :date
-#
-#    specified_dateは特定の日付を指定したい場合に使用
-
 require 'date'
 
 class Post < ActiveRecord::Base

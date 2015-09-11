@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: posts
-#
-#  id             :integer          not null, primary key
-#  title          :string(255)
-#  body           :text
-#  author_id      :integer
-#  created_at     :datetime
-#  updated_at     :datetime
-#  is_draft       :boolean          default(FALSE)
-#  specified_date :date
-#
-
 require 'rails_helper'
 require 'date'
 

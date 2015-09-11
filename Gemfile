@@ -143,8 +143,6 @@ gem 'breadcrumble'
 
 gem 'slim'
 
-gem 'annotate', '>=2.6.0'
-
 gem 'kaminari', github: 'amatsuda/kaminari'
 
 gem 'jwt', '0.1.11'
