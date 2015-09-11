@@ -18,9 +18,6 @@ class ApisController < ApplicationController
     uploads = []
 
     params[:files].each do |file|
-      # Skip uploading if file ext is not listed.
-      next unless file.original_filename =~ /\.(jpe?g|png|gif|pdf)\Z/
-
       hash_value = Digest::MD5.file(file.path)
       object_file_name = "#{hash_value}#{File.extname(file.original_filename)}"
       uploaded_file = UploadedFile.new(file: file.path, name: object_file_name)
@@ -40,6 +37,8 @@ class ApisController < ApplicationController
           uploads << { type: 'slide', name: cover_image_name, url: uploaded_file.url,
                        image: cover_file.url }
         end
+      else
+        uploads << { type: 'misc', name: file.original_filename, url: uploaded_file.url }
       end
     end
 

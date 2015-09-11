@@ -42,6 +42,11 @@ $.extend
             replacing_text = "[![" + file.name + "](" + file.image + ")](" + file.url + ")"
             new_textarea_value = textarea_value.replace('[Uploading... #' + data.result.uploading_index + ']', replacing_text)
             settings.$textarea.val(new_textarea_value)
+          else
+            # ![file-name](link to url)
+            replacing_text = "[" + file.name + "](" + file.url + ")"
+            new_textarea_value = textarea_value.replace('[Uploading... #' + data.result.uploading_index + ']', replacing_text)
+            settings.$textarea.val(new_textarea_value)
 
           settings.$textarea.trigger("change")
           # $('<p/>').text(file.name).appendTo('#files') # TODO
