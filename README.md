@@ -1,10 +1,10 @@
 rendezvous
 ==========
 
-[![Build Status](https://travis-ci.org/tadyjp/rendezvous.png)](https://travis-ci.org/tadyjp/rendezvous)
-[![Coverage Status](https://coveralls.io/repos/tadyjp/rendezvous/badge.png)](https://coveralls.io/r/tadyjp/rendezvous)
-[![Code Climate](https://codeclimate.com/github/tadyjp/rendezvous.png)](https://codeclimate.com/github/tadyjp/rendezvous)
-[![Dependency Status](https://gemnasium.com/tadyjp/rendezvous.png)](https://gemnasium.com/tadyjp/rendezvous)
+[![Build Status](https://travis-ci.org/iBenza/rendezvous.png)](https://travis-ci.org/iBenza/rendezvous)
+[![Coverage Status](https://coveralls.io/repos/iBenza/rendezvous/badge.png)](https://coveralls.io/r/iBenza/rendezvous)
+[![Code Climate](https://codeclimate.com/github/iBenza/rendezvous.png)](https://codeclimate.com/github/iBenza/rendezvous)
+[![Dependency Status](https://gemnasium.com/iBenza/rendezvous.png)](https://gemnasium.com/iBenza/rendezvous)
 
 A simple markdown-based blog & wiki system for team.
 
@@ -18,7 +18,7 @@ A simple markdown-based blog & wiki system for team.
 ## Get code and install gems.
 
 ```
-$ git clone git@github.com:tadyjp/rendezvous.git
+$ git clone git@github.com:iBenza/rendezvous.git
 $ cd rendezvous
 $ bundle install
 ```
