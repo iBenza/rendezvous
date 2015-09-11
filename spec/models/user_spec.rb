@@ -8,16 +8,6 @@ describe User do
     let(:alice) { create(:alice) }
     let(:post) { create(:post) }
 
-    describe '#google_oauth_token_expired?' do
-      it 'not expired' do
-        expect(alice.google_oauth_token_expired?).to be_falsey
-      end
-
-      it 'expired' do
-        expect(bob.google_oauth_token_expired?).to be_truthy
-      end
-    end
-
     describe '#unwatch / #watch / #watching?' do
       it 'not watching' do
         expect(alice.watching?(post: post)).to be_falsey

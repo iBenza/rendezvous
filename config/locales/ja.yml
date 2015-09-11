@@ -221,9 +221,6 @@ ja:
         subject: パスワードの再設定
       unlock_instructions:
         subject: アカウントの凍結解除
-    omniauth_callbacks:
-      failure: 「%{reason}」のため、%{kind}による認証ができませんでした。
-      success: '%{kind}による認証に成功しました。'
     passwords:
       no_token: パスワード再設定のメール以外からこのページへアクセスする事はできません。もしパスワード再設定のメールに記載されたリンクをクリックしてこのページへ訪れた場合、不完全なURLのリンクをクリックしていないか確認してください。メーラーによっては、リンクのURLが途中で切れる可能性があります。
       send_instructions: パスワードの再設定方法を数分以内にメールでご連絡します。

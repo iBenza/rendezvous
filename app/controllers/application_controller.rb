@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    session[:login_redirect_to] || request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+    session[:login_redirect_to] || stored_location_for(resource) || root_path
   end
 
   rescue_from(ActionController::ParameterMissing) do |parameter_missing_exception|
