@@ -190,15 +190,10 @@ GEM
       teaspoon (>= 0.8.0)
     highline (1.6.21)
     hike (1.2.3)
-    hipchat (1.4.0)
-      httparty
     hitimes (1.2.2)
     htmlentities (4.3.2)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    httparty (0.13.3)
-      json (~> 1.8)
-      multi_xml (>= 0.5.2)
     i18n (0.6.11)
     i18n_generators (1.2.1)
       mechanize
@@ -239,7 +234,6 @@ GEM
     mini_portile (0.6.2)
     minitest (5.4.3)
     multi_json (1.11.2)
-    multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.17)
     net-http-digest_auth (1.4)
@@ -467,7 +461,6 @@ DEPENDENCIES
   guard-rspec
   guard-rubocop
   guard-teaspoon
-  hipchat
   i18n_generators
   jbuilder
   jquery-rails
