@@ -49,8 +49,6 @@ gem 'mysql2'
 
 gem 'devise'
 
-gem 'omniauth-google-oauth2'
-
 # Markdown
 gem 'github-markdown'
 
