@@ -32,4 +32,7 @@
 .env
 !.env.sample
 
+/public/uploads/*
+!/public/uploads/.keep
+
 *.zip
