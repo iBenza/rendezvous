@@ -16,14 +16,11 @@ env:
   - secure: A72vqUWQiRal8fCMlobXhYrGVDImUXmrCQGuUc382glay7WdJ4ZsIiVvO1gp8mj7X4HUeejmgY4AUVJy6FmCL4LNxDhdRuOirQ+kOcdsuQKDlMPcbGdoYk23ZBlxeq1tqW9Qs8mNjZYHGx3BFf/qtNhgvTLMr+/wQMZi+110e3g=
 services:
 - mysql
-before_install:
-- 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
-- gem install bundler fog
-- sh ./script/travis/bundle_install.sh
-before_script:
-- mysql -e 'CREATE DATABASE rendezvous_test;'
-after_script:
-- ruby script/travis/bundle_cache.rb
+install:
+- bundle install --without production --deployment
+cache:
+  directories:
+    - vendor/bundle
 script:
 - bundle exec rake db:create db:test:load spec
 - bundle exec rubocop
