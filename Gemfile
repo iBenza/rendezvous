@@ -48,6 +48,7 @@ end
 gem 'mysql2'
 
 gem 'devise'
+gem 'devise-kerberos-authenticatable', github: 'iBenza/devise-kerberos-authenticatable'
 
 # Markdown
 gem 'github-markdown'
