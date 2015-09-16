@@ -6,12 +6,6 @@ defaults: &defaults
 
   permited_login_domain: <%= ENV['RV_PERMITTED_LOGIN_DOMAIN'] %>
 
-  # For file upload
-  s3:
-    access_key_id: <%= ENV['RV_S3_ASSESS_KEY_ID'] %>
-    secret_access_key: <%= ENV['RV_S3_SECRET_ACCESS_KEY'] %>
-    bucket_name: <%= ENV['RV_S3_BACKET_NAME'] %>
-
   # optional
   hipchat:
     token: <%= ENV['RV_HIPCHAT_TOKEN'] %>
