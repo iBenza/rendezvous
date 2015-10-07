@@ -12,11 +12,11 @@ describe Tag do
     end
 
     it 'successfully moved' do
-      expect(Tag.find_by(name: 'ruby').posts.size).to eq(2)
-      expect(Tag.find_by(name: 'java').posts.size).to eq(2)
+      expect(Tag.find_by(name: 'ruby').posts.count).to eq(2)
+      expect(Tag.find_by(name: 'java').posts.count).to eq(2)
       @tag_java.move_all_posts_to!(@tag_ruby)
-      expect(Tag.find_by(name: 'ruby').posts.size).to eq(3)
-      expect(Tag.find_by(name: 'java').posts.size).to eq(0)
+      expect(Tag.find_by(name: 'ruby').posts.count).to eq(3)
+      expect(Tag.find_by(name: 'java').posts.count).to eq(0)
     end
   end
 
@@ -32,6 +32,30 @@ describe Tag do
       @tag_ruby.parent_tag = @tag_lang
       expect(@tag_ruby.parent).to eq(@tag_lang)
       expect(@tag_lang.children).to include(@tag_ruby)
+    end
+  end
+
+  describe '#posts_count' do
+    before :each do
+      @tag_ruby = Tag.create(name: 'ruby')
+      @tag_java = Tag.create(name: 'java')
+      @author = create(:author)
+      @post1 = Post.create id: 1001, author: @author, title: 'ruby rspec', body: 'hoge', tags: [@tag_ruby]
+      @post2 = Post.create id: 1002, author: @author, title: 'ruby is better than java', body: 'hoge', tags: [@tag_ruby, @tag_java]
+      @post3 = Post.create id: 1003, author: @author, title: 'java java...', body: 'hoge', tags: [@tag_java]
+    end
+
+    it 'updated when tag changed' do
+      expect {
+        @post1.update(tags: [@tag_java])
+      }.to change { Tag.find_by(name: 'ruby').posts_count }.by(-1)
+        .and change { Tag.find_by(name: 'java').posts_count }.by(1)
+    end
+
+    it 'decremented when post destroyed' do
+      expect {
+        @post3.destroy
+      }.to change { Tag.find_by(name: 'java').posts_count }.by(-1)
     end
   end
 end
