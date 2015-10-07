@@ -55,3 +55,7 @@ Metrics/AbcSize:
 # ???
 Style/RaiseArgs:
   Enabled: false
+
+Style/Blocks:
+  Exclude:
+    - 'spec/**/*'
