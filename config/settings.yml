@@ -7,11 +7,6 @@ defaults: &defaults
   permited_login_domain: <%= ENV['RV_PERMITTED_LOGIN_DOMAIN'] %>
 
   # optional
-  hipchat:
-    token: <%= ENV['RV_HIPCHAT_TOKEN'] %>
-    room: <%= ENV['RV_HIPCHAT_ROOM'] %>
-
-  # optional
   google_analytics: <%= ENV['RV_GOOGLE_ANALYTICS_ID'] %>
 
   # optional
